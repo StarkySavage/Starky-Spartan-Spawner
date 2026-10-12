@@ -1,0 +1,29 @@
+STARKY SPARTAN SPAWNER - AI28 - STEAM CU4
+
+REQUIREMENTS
+Halo Campaign Evolved Steam build 2026.08.11.1121610.2. Other builds are not supported by this release's native checks.
+Install a game-compatible UE4SS distribution separately, including UEHelpers and enabled LoadMap, InitGameState and EngineTick hooks. Follow that distribution's setup instructions; generic upstream UE4SS may require game-specific setup. Upstream: https://github.com/UE4SS-RE/RE-UE4SS
+UE4SS, shared settings, signatures and mods.txt are not included or overwritten by this public package.
+
+INSTALL / UPDATE
+1. Close the game. Back up the existing HaloSandbox mod and scenario files before replacing them. Do not install the original Revolved/HaloSandbox alongside this version; it uses the same folder.
+2. In Steam, Manage > Browse local files. Extract this ZIP into a separate folder. Merge the extracted Meteorite folder into the game folder Steam opened, replacing the spawner files.
+3. Apply the required capacity fix to your own simulation DLL. From PowerShell in the extracted folder, run:
+   powershell -NoProfile -ExecutionPolicy Bypass -File .\Apply-Capacity-Fix.ps1 -GameFolder "E:\SteamLibrary\steamapps\common\Halo Campaign Evolved"
+   Substitute your actual game folder. The script only supports the exact CU4 DLL, verifies before/after hashes, creates a backup beside it, and safely does nothing if already patched. The command permits this reviewed script for that PowerShell process only; it does not change your saved execution policy.
+4. Start a NEW mission after updating scenario files. Do not resume an older checkpoint for the first test. Press F4 to open the menu; arrows navigate, Enter selects, Backspace goes back, F4 closes.
+
+The capacity fix increases tag memory from 800 to 1280 MiB (480 MiB extra). It is needed for the tested Two Betrayals spawning fix. The patch script has been verified forward, repeat-run, reverse and unsupported-file refusal on a disposable copy. The patched DLL itself was gameplay-tested in Starky's installation. Steam Verify Files or a game update may undo it; the script will refuse unknown builds.
+
+SCENARIO COMPATIBILITY
+Includes StarkySpartanSpawner_Bonus_P (E10, 207 squads, stock armor) and StarkySpartanSpawner_Maw_P (D40, 214 squads). Other mods overriding these scenarios may conflict. This is NOT the personal bonus-mission skin adaptation and contains no Soppo skin. Do not combine the public Bonus files with Turn_off_MarkIV_optional_P: choose one compatible E10 override. Personal backup users should use their separate Archive instead.
+
+FEATURES / LIMITS
+Faction/rank/loadout AI menus, x1/x10, weapon and vehicle spawning, AI pause/resume, three-Marine escort, independent Johnson escort, catch-up teleport and Battle Observer. Observer makes AI ignore the player; it is not visual invisibility or invulnerability. No Pelican. Companion pathfinding and local squad orders depend on the mission. Join Local Squad Orders does not promise independent hunting. See CHANGELOG for test scope.
+
+UNINSTALL / RESTORE
+Close the game. Restore your previous HaloSandbox and scenario backups, or remove this mod's HaloSandbox folder and the three Bonus plus three Maw files. Do not remove shared UE4SS files used by other mods.
+To reverse this exact capacity patch, run the same command with -Restore. It refuses other DLL versions. Keep the backup files until satisfied. Start a new mission after changing scenario files.
+
+UPLOAD
+Upload this Nexus ZIP directly. Do not wrap it in another ZIP. No loader, game DLL, logs, private settings or nested archives are bundled. The two native DLLs are required mod code. Package checks are not an antivirus certification.

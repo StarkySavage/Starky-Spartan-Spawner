@@ -1,0 +1,49 @@
+SOURCES DES DLL HALO SANDBOX 1.6.0 STEAM R1
+===========================================
+
+Outil utilisé pour l'archive Steam R1 : Zig 0.16.0, cible
+x86_64-windows-msvc. Le fichier .S est la version compatible Clang du stub ASM.
+
+Contrôleur XInput :
+
+  zig cc -target x86_64-windows-msvc -O2 -Werror -shared \
+    -o halosandbox_controller.dll halosandbox_controller.c \
+    -lkernel32 -luser32
+
+Pont natif Halo :
+
+  zig cc -target x86_64-windows-msvc -c \
+    -o halosandbox_hook.obj halosandbox_hook.S
+
+  zig cc -target x86_64-windows-msvc -O2 -Werror \
+    -Wno-deprecated-declarations -shared -o halosandbox_native.dll \
+    halosandbox_native_v2.c halosandbox_hook.obj \
+    -lkernel32 -luser32 -lxinput
+
+Les deux DLL ne se connectent pas à Internet. Le contrôleur lit XInput et
+envoie les touches réservées au menu. Le pont natif vérifie la build Halo avant
+d'exécuter ses commandes, puis charge/crée les tags et acteurs sur le thread
+de simulation du jeu.
+
+Le pont protocole 70 fournit le no-clip natif des zones à pied/véhicule, la
+restauration de son état, l'invincibilité du joueur et de son véhicule, le
+garde de munitions conditionnel à 1 Hz et la sortie retail bornée des alliés.
+Le boost du Pélican n'utilise ni pont de vitesse, ni boucle Lua, ni greffe de
+tag Banshee. La DLL vérifie l'empreinte runtime originale du tag Pélican
+(`flags +0x14C = 0x00002001`, courbe `+0x470 = 3/0/0/0/0/0`) puis active une
+seule fois le drapeau `unit has boost` (`0x08000000`). Le chemin d'entrée natif
+associe alors Maj gauche et LT au boost. La physique human-plane, la courbe,
+les propulseurs et les effets restent ceux du Pélican. Le résultat est mis en
+cache jusqu'au changement de mission; aucun worker de boost n'est créé.
+
+La tourelle du Pélican 1.6.0 n'ajoute aucun worker de tir dans ces DLL. Elle est
+activée par quatre surcharges IoStore minimales : le siège pilote du Pélican,
+sa tourelle enfant, son arme et son projectile d'origine. Pour le son, l'arme
+reprend les bornes 0/0 et le type natif du Banshee, mais déclenche l'effet du
+canon principal humain du Scorpion. Ses sons proche et lointain utilisent le
+point `primary_trigger`, sans second attachement ou boucle audio. Le projectile
+utilise les effets natifs de détonation du canon de frégate. Un cinquième
+conteneur ajuste uniquement les distances d'atténuation du son proche Scorpion
+(plein volume 30 m, portée 120 m). Le
+moteur Halo reste responsable de la visée, de l'animation, du son, du
+projectile, des dégâts et des impacts.

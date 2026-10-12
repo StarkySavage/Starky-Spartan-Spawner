@@ -1,0 +1,23 @@
+{
+  "Apply-Capacity-Fix.ps1": "826002582d0e127be80c5f43b4c5520c4d8daa2daf8c31905df3ceff20243260",
+  "CHANGELOG.txt": "957d3ef264b0afbcc22e53bc51d3996730794dd9c00e173fe7460d77bfb0239f",
+  "READ ME - Installation.txt": "ee7570472da6424b0e52557ee13bbdb420600de682dab3aace7aa7dd252c1a51",
+  "Docs/CREDITS.txt": "5e5353207224f830752866540fd0fb4b6c3d76a387f993661b4ab5aa0ae5a623",
+  "Docs/LICENSE-HaloSandbox-MIT.txt": "992b5dd2d4786c7ac97b8f81a55ba4ee13382e2da9ba9ce41f21366d0716a748",
+  "Source/BUILD.txt": "91f21761f6d44ce8e5257ac0a7cae1d454421f780561b772e8cd679fc8a3b69c",
+  "Source/halosandbox_controller.c": "7966be4dc27b6186a4f3d4dcc9263f3c8d2e0d979c05f11f686711948440d152",
+  "Source/halosandbox_hook.S": "c8d0f024254ff8277f7d5436b268db814a7abe952516b95a171037137bdb783f",
+  "Source/halosandbox_native_v2.c": "81d168d00bae91c19b05d64462f32317263a0c0714f36d4a5c5f2af5e4879479",
+  "Source/phase1_profile.h": "361b087b00a7b96a96de570df4a475067158cbef9f307985ac5e3b38c84b04e8",
+  "Meteorite/Binaries/Win64/ue4ss/Mods/HaloSandbox/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "Meteorite/Binaries/Win64/ue4ss/Mods/HaloSandbox/Native/halosandbox_controller.dll": "ae98f5595888dba103fba577d39dbe3b0b5a57f9e473f46deea6a914dc818302",
+  "Meteorite/Binaries/Win64/ue4ss/Mods/HaloSandbox/Native/halosandbox_native.dll": "69fd700f2e984094943dc04545030eb5757729a7786cf83a2040ae8cafce7ae4",
+  "Meteorite/Binaries/Win64/ue4ss/Mods/HaloSandbox/Scripts/catalog.lua": "50db00b675a2a1de6e8e8658434a6d4dbcc4c576df29d7b6ca19298423afe7d2",
+  "Meteorite/Binaries/Win64/ue4ss/Mods/HaloSandbox/Scripts/main.lua": "28c005b6677baf02785fc273c0f8c2854f40da364530dd566b881d816a2eb2c5",
+  "Meteorite/Content/Paks/~mods/StarkySpartanSpawner_Bonus_P.pak": "b712c03a695e34cd522446b73c4f71644a402ff141eb19ce66c269fd5676ad8c",
+  "Meteorite/Content/Paks/~mods/StarkySpartanSpawner_Bonus_P.ucas": "7673b6e53b043d6f628697b8c364955febb6b80cbca6349146b112c2ebc2952e",
+  "Meteorite/Content/Paks/~mods/StarkySpartanSpawner_Bonus_P.utoc": "2d573fed235fae2cefa0787338a6723a031b85906b3d4ef99fc9bea76581dcf3",
+  "Meteorite/Content/Paks/~mods/StarkySpartanSpawner_Maw_P.pak": "b712c03a695e34cd522446b73c4f71644a402ff141eb19ce66c269fd5676ad8c",
+  "Meteorite/Content/Paks/~mods/StarkySpartanSpawner_Maw_P.ucas": "e41ac62947d74eae265a82f2cb9be9134a88df6e56044fca84ca2ffae3468488",
+  "Meteorite/Content/Paks/~mods/StarkySpartanSpawner_Maw_P.utoc": "0605d1107ccbdb1b2c12e86551294a3e7168ead97f783ff573c4684fdac07ce5"
+}

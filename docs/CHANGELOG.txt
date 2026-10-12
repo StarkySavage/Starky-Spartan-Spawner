@@ -1,0 +1,13 @@
+Starky Spartan Spawner - AI28 / 2026-10-10
+
+Changes since the Battle Observer release:
+- Marine menus: Follow, Free Combat, and Join Local Squad Orders; male/female, weapon, x1/x10.
+- Fifteen explicit Marine weapon choices, including rocket launchers. Energy sword and unfinished DMR excluded. Mixed Weapons and automatic escort pools unchanged.
+- Maw spawning repaired using dedicated scenario squad definitions.
+- Two Betrayals spawning crash addressed by increasing the supported simulation build's tag-memory capacity.
+- Missing player/human allegiance repaired on Two Betrayals and Keyes, without resetting existing alliances.
+- Removed the obsolete AI-test footer.
+
+Join Local Squad Orders is the renamed experimental awareness mode. It is NOT autonomous Search and Destroy. Marines may obey mission routines, wait at doors, defend positions or follow the player. Initial nearby-enemy awareness is applied once at spawn; no new recurring search loop.
+
+Validation: Starky confirmed repaired spawns/combat and friendly Marines in the late missions discussed, and observed squad behavior on Truth and Reconciliation. The 15 expanded weapon choices have not all been gameplay-tested; unusual weapons may lack suitable Marine animations/attacks. Public stock-armor E10 companion is structurally verified but not separately gameplay-tested; personal E10 setup was tested. Solo use only has been validated; co-op is unverified.

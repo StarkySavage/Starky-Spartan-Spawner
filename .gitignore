@@ -1,0 +1,14 @@
+/build/
+__pycache__/
+*.pyc
+*.dll
+*.exe
+*.pdb
+*.obj
+*.lib
+*.zip
+*.dmp
+*.log
+*.ucas
+*.utoc
+*.pak

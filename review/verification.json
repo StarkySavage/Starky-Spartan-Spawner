@@ -1,0 +1,63 @@
+{
+  "verified_on": "2026-10-11",
+  "compiler": "Zig 0.16.0 x86_64-windows-gnu",
+  "dll_builds": "both succeeded",
+  "game_installation_changed": false,
+  "rebuilt_binaries_gameplay_tested": false,
+  "native_sections": {
+    ".text": true,
+    ".rdata": true,
+    ".buildid": false,
+    ".data": true,
+    ".pdata": true,
+    ".tls": true,
+    ".reloc": true
+  },
+  "controller_binary_identical": false,
+  "lua_source_matches_release": true,
+  "capacity_script_matches_release": true,
+  "scenario_chunks_match_release": {
+    "Bonus": true,
+    "Maw": true
+  },
+  "retoc_sha256": "a145f3557ec60b163ed1b78b2f380232d2753fa30350c8013c98e171db3ae7e7",
+  "halosandbox_native.dll": {
+    "release_sha256": "69fd700f2e984094943dc04545030eb5757729a7786cf83a2040ae8cafce7ae4",
+    "rebuilt_sha256": "756e4811edfbf56fb7eaf613c1a05a38281078ee5fb4231138e18355952a7dc0",
+    "exports": [
+      "halosandbox_exec",
+      "halosandbox_menu_closed",
+      "halosandbox_menu_open",
+      "halosandbox_noclip_bridge",
+      "halosandbox_pelican_audio_bridge",
+      "halosandbox_pelican_bridge",
+      "halosandbox_quiesce"
+    ],
+    "imports": [
+      "KERNEL32.dll",
+      "USER32.dll",
+      "bcrypt.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll"
+    ]
+  },
+  "halosandbox_controller.dll": {
+    "release_sha256": "ae98f5595888dba103fba577d39dbe3b0b5a57f9e473f46deea6a914dc818302",
+    "rebuilt_sha256": "ced5d3972da52c7b52d99f7816665fe8323b97e5acbff5fbc600dc9142d91264",
+    "exports": [
+      "halosandbox_controller_start"
+    ],
+    "imports": [
+      "KERNEL32.dll",
+      "USER32.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll"
+    ]
+  }
+}
